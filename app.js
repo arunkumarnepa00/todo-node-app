@@ -17,7 +17,7 @@ const routes=require('./routes/routes');
 app.use('/api/v1',routes);
 
 //App Listener
-app.listen(5000,()=>{
+app.listen(process.env.PORT || 5000,()=>{
     console.log("Backend server is running on port 5000");
 })
 
