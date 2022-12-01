@@ -4,7 +4,7 @@ const app=express();
 const cors=require('cors');
 
 //DB Connection
-const dbconnection=require('../config/database')
+const dbconnection=require('./config/database')
 dbconnection();
 
 //middlewares
@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 
 //Routes
-const routes=require('../routes/routes');
+const routes=require('./routes/routes');
 app.use('/api/v1',routes);
 
 //App Listener
